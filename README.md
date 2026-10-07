@@ -1,5 +1,5 @@
 # LLM Agent Guardrail Override — Multi-Vendor PoCs
-author=<yuta>
+author=yuta
 date=2026-10-07
 status=overview / full PoC prompts shared to reviewers on request
 
