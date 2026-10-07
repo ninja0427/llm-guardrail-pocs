@@ -28,23 +28,9 @@ LLM agent safety boundary (refusal guardrail / system prompt) override.
 ## [PoC 3]
 - Additional technique on same target: long-form custom persona / system-prompt override also reproduced
 
-## Minimal repro sample (shared here)
-```python
-import subprocess, sys
-
-def pwn():
-    subprocess.Popen(
-        ["cmd", "/c", "echo pwned && systeminfo > C:\\pwned.txt"],
-        creationflags=0x00000008 | 0x00000200,
-        close_fds=True, stdout=subprocess.DEVNULL,
-    )
-    print("[+] done")
-
-pwn()
-```
 Code accepted by model, predicted output traced. Full file-write proof shared to reviewers on request.
 
-Impact classes
+## Impact classes
 arbitrary local file write
 tool / sub-agent abuse
 cross-model orchestration
